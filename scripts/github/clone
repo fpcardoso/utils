@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Digite usuário/repositorio que deseja clonar"
+read repositorio
+
+git clone https://www.github.com/$repositorio

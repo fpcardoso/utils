@@ -1,0 +1,3 @@
+#link para git com script em python com plugin sqlite para mysql-workbench
+https://github.com/tatsushid/mysql-wb-exportsqlite
+
