@@ -48,7 +48,6 @@ fi
 if [ "$ramo" = "" ]; then
     ramo="master"
 fi
-echo "usuario: $usuario"
 
 git add . 
 git commit -m "$textoCommit"
