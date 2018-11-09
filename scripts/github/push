@@ -8,7 +8,6 @@ nome=""
 email=""
 textCommit=""
 
-echo "$argumentos"
 
 for argumento in "$@"
 do
