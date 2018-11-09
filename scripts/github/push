@@ -47,6 +47,6 @@ fi
 
 git add . 
 git commit -m "$textoCommit"
-echo "$usuario" | git push $repositorio $ramo 
+git push $repositorio $ramo 
 
 
