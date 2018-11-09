@@ -1,0 +1,57 @@
+#!/bin/bash
+
+arquivoConfig=~/.gitconfig
+
+repositorio=""
+ramo=""
+nome=""
+email=""
+textCommit=""
+
+echo "$argumentos"
+
+for argumento in "$@"
+do
+	
+	if [ "$argumento"  = "-f" ]; then
+		email="felipepassoscardoso@gmail.com"
+		nome="Felipe Cardoso"
+		usuario="fpcardoso"
+		if ! [ -e "$arquivoConfig" ]; then
+			git config --global user.name "$nome"
+			git config --global user.email "$email"
+		fi
+
+	elif [ "$argumento" = "-m" ];then
+		echo "Digite comentário para commit"
+		read textoCommit
+	
+	fi
+done
+
+echo "$email"
+
+if [ "$nome" = ""  ]; then
+	echo "Digite seu nome"
+	read nome
+fi
+if [ "$email" = "" ]; then
+	echo "Digite seu email"
+	read email
+fi
+if [ "$textoCommit" = "" ]; then
+    textoCommit="Atualizado em $(date +%d/%m/%Y) às $(date +%T)"
+fi
+if [ "$repositorio" = "" ]; then
+    repositorio="origin"
+fi
+if [ "$ramo" = "" ]; then
+    ramo="master"
+fi
+echo "usuario: $usuario"
+
+git add . 
+git commit -m "$textoCommit"
+echo "$usuario" | git push $repositorio $ramo 
+
+

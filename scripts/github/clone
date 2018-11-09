@@ -1,6 +1,21 @@
 #!/bin/bash
 
-echo "Digite usuário/repositorio que deseja clonar"
+usuario=""
+
+for argumento in "$@" 
+do
+	if [ "$argumento" = "-f" ]; then
+		usuario="fpcardoso"
+	fi
+done
+
+if [ "$usuario" = "" ]; then
+	
+	echo "Digite usuário"
+	read usuario
+fi
+
+echo "Digite repositório que deseja clonar"
 read repositorio
 
-git clone https://www.github.com/$repositorio
+git clone https://www.github.com/$usuario/$repositorio
