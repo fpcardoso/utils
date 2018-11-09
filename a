@@ -1,0 +1,15 @@
+#!/bin/bash
+
+arg4_is_an_argument=''
+for arg in "$@" ; do
+    echo "Antes do if $arg"
+    if [[ "$arg" = 'arg4' ]] ; then
+        echo $arg
+        arg4_is_an_argument=1
+    fi
+done
+if [[ "$arg4_is_an_argument" ]] ; then
+    : the argument was present
+else
+    : the argument was not present
+fi
