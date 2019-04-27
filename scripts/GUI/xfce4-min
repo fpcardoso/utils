@@ -1,0 +1,37 @@
+#!/bin/bash
+
+sudo echo "deb http://ftp.br.debian.org/debian/ stretch contrib non-free" >> /etc/apt/sources.list
+sudo echo "deb-src http://ftp.br.debian.org/debian/ stretch contrib non-free" >> /etc/apt/sources.list
+sudo apt-get install -y iwlwifi-firmware
+sudo apt-get --no-install-recommends install -y xserver-xorg-core
+sudo apt-get --no-install-recommends install -y xserver-xorg-video-fbdev
+sudo apt-get --no-install-recommends install -y xserver-xorg
+sudo apt-get --no-install-recommends install -y xfwm4
+sudo apt-get --no-install-recommends install -y xfce4-session
+sudo apt-get --no-install-recommends install -y xfce4-panel
+sudo apt-get --no-install-recommends install -y xfdesktop4
+sudo apt-get --no-install-recommends install -y olicykit-1
+sudo apt-get --no-install-recommends install -y policykit-1
+sudo apt-get --no-install-recommends install -y xfce4-power-manager
+sudo apt-get --no-install-recommends install -y gtk2-engines gtk2-engines-pixbuf
+sudo apt-get --no-install-recommends install -y x11-xserver-utils
+sudo apt-get --no-install-recommends install -y lightdm
+sudo apt-get --no-install-recommends install -y lxterminal
+sudo apt-get --no-install-recommends install -y lxtask
+sudo apt-get --no-install-recommends install -y mousepad
+sudo apt-get --no-install-recommends install -y network-manager-gnome sed -i 's/false/true/g' /etc/NetworkManager/NetworkManager.conf
+sudo apt-get --no-install-recommends install -y thunar
+sudo apt-get --no-install-recommends install -y libav-tools gstreamer1.0-libav
+sudo apt-get --no-install-recommends install -y gstreamer1.0-plugins-good
+sudo apt-get --no-install-recommends install -y gstreamer1.0-plugins-bad
+sudo apt-get --no-install-recommends install -y gstreamer1.0-plugins-ugly
+sudo apt-get --no-install-recommends install -y gstreamer1.0-nice
+sudo apt-get --no-install-recommends install -y vlc qt4-qtconfig
+sudo apt-get --no-install-recommends install -y pulseaudio
+sudo apt-get --no-install-recommends install -y xfce4-pulseaudio-plugin
+sudo apt-get install -y xfce4-whiskermenu-plugin
+sudo apt-get install -y viewnior
+sudo apt-get --no-install-recommends install -y system-config-printer
+sudo apt-get --no-install-recommends install -y xfburn
+sudo apt-get install -y terminator
+sudo apt-get install -y vim
